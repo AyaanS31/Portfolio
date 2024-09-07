@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayaan Ali Shaik Portfolio</title>
+    <link rel="stylesheet" href="styles.css" href="script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style >
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding:0;
+}   
+
+    button {
+        width: 250px;
+        height: 50px;
+        display: block;
+        margin: auto;
+        position: relative;
+        top: 500px;
+        border-radius: 15px;
+        font-size: 1.5em;
+        font-family: "Helvetica", sans-serif;
+        background-color: #dbdbdb;
+        border: none;
+        color: #1F2F45;
+        transition: all 0.2s;
+        left: 500px;
+        
+    }
+    button:hover {
+        background-color: #1F2F45;
+        color: #dbdbdb;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="cross-button" onclick=hidenavbar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li id="home"><a href="#home"></a></li>
+            <li><a href="#about"></a></li>
+            <li><a href="#aspects"></a></li>
+            <li><a href="#projects"></a></li>
+            <li><a href="#contact"></a></li>
+        </ul>
+        <ul>
+            <li><a id="portfolio"href="#portfolio">My Portfolio</a></li>
+            <li><a id="home" href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#aspects">Interests/Ambitions</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="menu-button" onclick=showNavbar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
+        <script>
+            function showNavbar(){
+                const navbar = document.querySelector('.navbar');
+                navbar.style.display = 'flex';
+            }
+            function hidenavbar(){
+                const navbar = document.querySelector('.navbar');
+                navbar.style.display = 'none';
+            }
+            document.addEventListener("DOMContentLoaded", function() {
+        // Select all navigation links
+        const links = document.querySelectorAll('nav a[href^="#"]');
+
+        // Add click event listener to each link
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default anchor behavior
+                
+                // Get the target section's ID from the href attribute
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                // Smoothly scroll to the target element's position
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Optionally hide the navbar after clicking a link (for mobile menus)
+                if (document.querySelector('.navbar').style.display === 'flex') {
+                    hidenavbar();
+                }
+            });
+        });
+    });
+</script>
+    </nav>
+
+        <p class="glow-text"> Hi There, I'm Ayaan Ali Shaik!</p>
+    <div class="glow-text-red">
+        <h2> I'm a Freshman in High School passionate in <br>
+            Robotics, Programming and Scientific Research!</h2>
+    </div>
+    <p style="font-size: 145px; text-align: center; color: #1F2F45; position: relative; top: 65px;" class="scroll">&#8595;</p>
+    <div class="actually_about_me" id="aboutme">
+            <h3 class="aboutme1">A bit <span class="About_Me">About Me</span> </h3>
+        <p class="about">
+            Hey there! I am Ayaan Ali Shaik. I am 14 years old and a freshman in Metea Valley High School from Naperville, Illinois. 
+            I have always been passionate about Scientific Analysis and Engineering prompted by programming. As a result, I dove down deep into the 
+            field of exploration and interest in robotics. Now, I am working on extremely cool projects involving web development and python. In addition to this,
+            Mathematics and the true Engineering Process, that involves physics and robots,
+            always held a special place in my heart. In the coming future, I look forward to learn more about these topics and amplify my skills through various projects and competitions.
+        </p>
+    </div>
+    <div class="aspects-interests" id="aspects">
+        <h3 class="aspects">My Interests, Ambitions and Projects</h3>
+            <p class="interests">As a robotics enthusiast, I am always looking for new challenges and opportunities to learn. One of my favorite areas is the integration of robotics and computer science. I have always been fascinated by how robots can be programmed to learn and adapt, which is a topic that I am deeply grasped in and am also working on. Another area I am exploring is the integration of robotics and Quantum or Astronomical Physics. I believe that by truly understanding the 
+            relationship between Astronomy, or Quantum Physics, and Robotics, we can revolutionize the world of technological pinnacles! </p>
+        </div> 
+        <div class="ambitions">
+            <h3>My Ambitions</h3>
+        </div>
+        <div class="projects">
+            <h3>Current Projects/Future Projects</h3>
+            <h4>Current Projects</h4>
+            <h4>Future Projects</h4>
+        </div>
+    </div>
+</body>
+</html>

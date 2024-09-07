@@ -1,0 +1,235 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+  .button-group{
+    text-align: top;
+    top: 250px;
+  }
+  button:hover,
+  button:focus {
+    background-color: var(--color-light);
+  }
+nav{
+    position: sticky;
+    background-color: hsla(0, 0%, 100%, 0.584);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+    z-index: 999;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+nav li{
+    height: 50px;
+}
+nav li:first-child{
+    margin-right:auto;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+nav a:hover{
+    background-color: #f0f0f0; 
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.196);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(212, 215, 210, 0);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.menu-icon{
+    text-align: right;
+    font-size: 75px;
+    font-style: bold;
+    top: 10px;
+    color: black
+}
+.sidebar li{
+    width: 100%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(45deg, #85da85, #02e8f9,#6f7edf);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+/* Basic text style */
+.glow-text {
+    position: relative;
+    text-align: center;
+    top: 45px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15vh;
+    color: #008cff;
+    text-shadow: none; /* No shadow initially */
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Glow effect on hover */
+.glow-text:hover {
+    text-shadow: 0px 10px #1d1f66;
+                
+}
+
+.glow-text-red {
+    position:relative;
+    color: rgb(232, 230, 123);
+    text-align: center;
+    top: 55px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 3.5vh;
+    text-shadow: none; /* No shadow initially */
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+.glow-text-red:hover {
+    text-shadow: 0 0 10px rgb(38, 0, 255), 
+                 0 0 20px #1a32e5, 
+                 0 0 30px #528cea, 
+                 0 0 40px #00bfff;
+}
+.scroll{
+    transition: all 0.2s;
+}
+.scroll:hover {
+    transform: translateY(10px);
+  }
+.aboutme{
+    font-size: 1.1em;
+}
+.About_Me {
+    color: rgb(235, 231, 7) !important;
+    text-decoration: underline;
+    position: relative; /* or position: absolute; depending on your layout */
+    top: -6px; /* Moves the element 250px up */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.aboutme1{
+    font-size: 50px;
+    text-align: center; 
+    padding: 60px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #1F2F45;
+    position: relative; /* Add this to enable the top property */
+    top: 134px; /* Moves the element 250px up */
+    transition: all 0.5s; /* Smooth transition */
+}
+
+.about{
+    width: 80%;
+    text-align: justify;
+    font-size: 20px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    top: 135px;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#aboutme{
+    
+}
+
+/* box-shadow: 120px 80px 40px 20px #0ff;
+/* border-radius: 50%;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white 
+      0 0 100px 60px #f0f, /* middle magenta
+      0 0 140px 90px #0ff; /* outer cyan */ 
+.aspects{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    font-size: 32px;
+    margin: auto;
+    padding: 60px;
+    position: relative;
+    top: 100px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.fa-solid fa-bars{
+    text-align: right;
+}
+.image{
+    text-align: right;
+}
+.material-symbols-outlined{
+    text-align: right;
+    font-size: 150px;
+}
+.interests{
+    width: 80%;
+    text-align: justify;
+    font-size: 20px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 90px;
+}
+#aspects{
+
+}
+.ambitions{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 32px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 100px;
+}
