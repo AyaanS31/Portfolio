@@ -107,10 +107,13 @@ body {
     text-shadow: 0px 10px #1d1f66;
                 
 }
+.circle{
+    border-radius: 50%;
+}
 
 .glow-text-red {
     position:relative;
-    color: rgb(232, 230, 123);
+    color: rgb(122, 0, 253);
     text-align: center;
     top: 55px;
     font-family: "Montserrat Alternates", sans-serif;
@@ -121,10 +124,10 @@ body {
     transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
 }
 .glow-text-red:hover {
-    text-shadow: 0 0 10px rgb(38, 0, 255), 
-                 0 0 20px #1a32e5, 
-                 0 0 30px #528cea, 
-                 0 0 40px #00bfff;
+    text-shadow: 0 0 10px rgb(0, 255, 213), 
+                 0 0 20px #01fce7, 
+                 0 0 30px #52eac4, 
+                 0 0 40px #00ffd5;
 }
 .scroll{
     transition: all 0.2s;
@@ -136,10 +139,9 @@ body {
     font-size: 1.1em;
 }
 .About_Me {
-    color: rgb(235, 231, 7) !important;
-    text-decoration: underline;
+    color: rgb(255, 42, 5) !important;
     position: relative; /* or position: absolute; depending on your layout */
-    top: -6px; /* Moves the element 250px up */
+    top: -2px; /* Moves the element 250px up */
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -205,6 +207,18 @@ body {
     text-align: right;
     font-size: 150px;
 }
+.interests1{
+    width: 80%;
+    text-align: center;
+    font-size: 32px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 90px;
+}
 .interests{
     width: 80%;
     text-align: justify;
@@ -232,4 +246,99 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     top: 100px;
+}
+.ambitions-detail{
+    margin: auto;
+    width: 80%;
+    text-align: left;
+    font-size: 20px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 100px;
+}
+.projects{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 32px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 100px;
+}
+.projects1{
+    margin: auto;
+    text-align: left;
+    font-size: 20px;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 15px;
+}
+.contacts{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 32px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 125px;
+}
+.contacts1{
+    margin: auto;
+    text-align: left;
+    font-size: 20px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 5px;
+}
+
+.image_section{
+    top: 125px;
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.image_section2{
+    position: relative;
+    top: 150px;
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.farewell{
+    margin: auto;
+    text-align: left;
+    font-size: 20px;
+    margin: auto;
+    line-height: 2;
+    position: relative;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    top: 175px;
 }

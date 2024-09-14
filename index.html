@@ -40,16 +40,94 @@
         color: #dbdbdb;
         cursor: pointer;
     }
+    a {
+  background: 
+    linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+    linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover,
+a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+}
+    a:hover {
+        text-decoration: 3px underline #7d49de;
+    }
+    h4{
+        background: 
+    linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+    linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  position: relative;
+    }
+    h4:hover,
+    h4:focus {
+        background-size: 0 0.1em, 100% 0.1em;
+    }
+    div23{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(232, 236, 0);
+        position: relative;
+        top: 100px;
+        animation: myAnimation 5s ease infinite;
+    }
+    @keyframes myAnimation {
+        from {
+            top: 100px;
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+        to {
+            top: 0px;
+            opacity: 0;
+            transform: rotate(360deg);
+        }
+    }
+    .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: moveCircle 10s infinite ease-in-out;
+        }
+
+        /* Keyframes for circle movement, initial template */
+        @keyframes moveCircle {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(300px, 150px);
+            }
+            50% {
+                transform: translate(-200px, 250px);
+            }
+            75% {
+                transform: translate(100px, -100px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
 </style>
 <body>
+    <div class="circle"></div>
     <nav>
         <ul class="navbar">
-            <li class="cross-button" onclick=hidenavbar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
             <li id="home"><a href="#home"></a></li>
             <li><a href="#about"></a></li>
             <li><a href="#aspects"></a></li>
             <li><a href="#projects"></a></li>
             <li><a href="#contact"></a></li>
+            <li class="cross-button" onclick=hidenavbar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
         </ul>
         <ul>
             <li><a id="portfolio"href="#portfolio">My Portfolio</a></li>
@@ -61,6 +139,53 @@
             <li class="menu-button" onclick=showNavbar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
         </ul>
         <script>
+            function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        // Function to create and animate multiple circles
+        function createCircles(numCircles) {
+            for (let i = 0; i < numCircles; i++) {
+                const circle = document.createElement('div');
+                circle.classList.add('circle');
+
+                // Randomize circle size, position, color, and animation duration
+                const size = random(30, 80); // Circle size between 30px and 80px
+                circle.style.width = `${size}px`;
+                circle.style.height = `${size}px`;
+
+                const color = `rgba(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)}, 0.7)`;
+                circle.style.backgroundColor = color;
+
+                const posX = random(0, window.innerWidth - size);
+                const posY = random(0, window.innerHeight - size);
+                circle.style.left = `${posX}px`;
+                circle.style.top = `${posY}px`;
+
+                const duration = random(5, 15); // Animation duration between 5s and 15s
+                circle.style.animationDuration = `${duration}s`;
+
+                // Add unique animation for each circle
+                const keyframes = `
+                    @keyframes moveCircle${i} {
+                        0% { transform: translate(0, 0); }
+                        25% { transform: translate(${random(-window.innerWidth, window.innerWidth)}px, ${random(-window.innerHeight, window.innerHeight)}px); }
+                        50% { transform: translate(${random(-window.innerWidth, window.innerWidth)}px, ${random(-window.innerHeight, window.innerHeight)}px); }
+                        75% { transform: translate(${random(-window.innerWidth, window.innerWidth)}px, ${random(-window.innerHeight, window.innerHeight)}px); }
+                        100% { transform: translate(0, 0); }
+                    }
+                `;
+                const styleSheet = document.styleSheets[0];
+                styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+
+                circle.style.animationName = `moveCircle${i}`;
+                document.body.appendChild(circle);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create 10 circles on page load
+            createCircles(10);
+        });
             function showNavbar(){
                 const navbar = document.querySelector('.navbar');
                 navbar.style.display = 'flex';
@@ -114,18 +239,39 @@
             always held a special place in my heart. In the coming future, I look forward to learn more about these topics and amplify my skills through various projects and competitions.
         </p>
     </div>
-    <div class="aspects-interests" id="aspects">
-        <h3 class="aspects">My Interests, Ambitions and Projects</h3>
-            <p class="interests">As a robotics enthusiast, I am always looking for new challenges and opportunities to learn. One of my favorite areas is the integration of robotics and computer science. I have always been fascinated by how robots can be programmed to learn and adapt, which is a topic that I am deeply grasped in and am also working on. Another area I am exploring is the integration of robotics and Quantum or Astronomical Physics. I believe that by truly understanding the 
+    <div class="aspects-interests">
+        <h3 class="aspects" id="aspects">My Interests, Ambitions and Projects</h3>
+        <h4 class="interests1" id="aspects">Interests</h4>
+            <p class="interests" id="aspects">As a robotics enthusiast, I am always looking forward for new challenges and opportunities to learn. One of my favorite areas is the integration of robotics and computer science. I have always been fascinated by how robots can be programmed to learn and adapt, which is a topic that I am deeply grasped in and am also working on. Another area I am exploring is the integration of robotics and Quantum or Astronomical Physics. I believe that by truly understanding the 
             relationship between Astronomy, or Quantum Physics, and Robotics, we can revolutionize the world of technological pinnacles! </p>
         </div> 
-        <div class="ambitions">
-            <h3>My Ambitions</h3>
+        <div>
+            <h4 class="ambitions" id="aspects">My Ambitions</h4>
+            <p class="ambitions-detail" id="aspects">Although I am involved in numerous fields that interest me, there is one intricate and deep field of study that mainly fascinates me. And that is: Astronomy and Astrophysics! Being an astronomer has always been my dream ambitions and I am 
+                eager to learn more about the universe and its mysteries. In order to boost my deep passion towards Astronomy and Astrophysics, I am also working on building skills for physics and grasping the mathematical variables of Astronomical Expansion! I also look forward to creating projects and data sets to further enhance my experience
+            and apply my knowledge in this field. Science Fairs are also something that I would consider as a part of my knowledge application! </p>
+            </p>
         </div>
-        <div class="projects">
-            <h3>Current Projects/Future Projects</h3>
-            <h4>Current Projects</h4>
-            <h4>Future Projects</h4>
+        <div class="projects" id="projects">
+            <h4>Projects</h4>
+            <p class="projects1">As I am a beginner to the Computer Science Field, I am working on many projects simultaneously in Website Development and Python. Again, as I just have started in this ecstatic field of marvels, I have not made high-end projects yet. I will be working on them in the coming weeks!</p>
+        </div>
+        <div class="image_section">
+            <img src="Aircraft_performance_calculator.png">
+            <p> This is a picture of an Aircraft Performance Calculator that I coded in order to store basic Spaceship travel information. <br> This is my most basic project.</p>
+        </div>
+        <div class="image_section2">
+            <img src="Solar System Visualization.png">
+            <p> This is a picture of a Solar System Visualization that I coded in order to showcase the positions of the planets in our solar system. <br> This was my first matplotlib visualization project.</p>
+        </div>
+        <div class="farewell">
+            <p> These were some of my projects that I worked upon. You could also look upon this Portfolio Website as a project in itself as I coded this website from scratch!</p>
+        </div>
+        <div class="contacts" id="contact">
+            <h4>Contacts</h4>
+            <p class="contacts1">Feel free to reach out to me at anytime if you have any questions or need assistance with any of these projects. I would be more than happy to help! My school email is ayaansha0285@k12.ipsd.org and my personal email is: ayaan.shaikusa@outlook.com.</p>
+        
+        </div>
         </div>
     </div>
 </body>
