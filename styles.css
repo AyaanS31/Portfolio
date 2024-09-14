@@ -156,7 +156,7 @@ body {
     font-style: normal;
     color: #1F2F45;
     position: relative; /* Add this to enable the top property */
-    top: 134px; /* Moves the element 250px up */
+    top: 14.89vh; /* Moves the element 250px up */
     transition: all 0.5s; /* Smooth transition */
 }
 
@@ -167,7 +167,7 @@ body {
     margin: auto;
     line-height: 2;
     position: relative;
-    top: 135px;
+    top: 15vh;
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -192,7 +192,7 @@ body {
     margin: auto;
     padding: 60px;
     position: relative;
-    top: 100px;
+    top: 11.11vh;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -217,7 +217,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 90px;
+    top: 10vh;
 }
 .interests{
     width: 80%;
@@ -229,7 +229,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 90px;
+    top: 10vh;
 }
 #aspects{
 
@@ -245,7 +245,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 100px;
+    top: 10vh;
 }
 .ambitions-detail{
     margin: auto;
@@ -258,7 +258,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 100px;
+    top: 10vh;
 }
 .projects{
     margin: auto;
@@ -271,7 +271,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 100px;
+    top: 10vh;
 }
 .projects1{
     margin: auto;
@@ -282,7 +282,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 15px;
+    top: 1.5vh;
 }
 .contacts{
     margin: auto;
@@ -295,7 +295,7 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 125px;
+    top: 12.5vh;
 }
 .contacts1{
     margin: auto;
@@ -307,11 +307,11 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 5px;
+    top: 0.5vh;
 }
 
 .image_section{
-    top: 125px;
+    top: 12.5vh;
     margin: auto;
     width: 80%;
     align-items: center;
@@ -322,7 +322,7 @@ body {
 }
 .image_section2{
     position: relative;
-    top: 150px;
+    top: 15vh;
     margin: auto;
     width: 80%;
     align-items: center;
@@ -340,5 +340,5 @@ body {
     font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    top: 175px;
+    top: 17.5vh;
 }
