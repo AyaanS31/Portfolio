@@ -186,12 +186,13 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 0 2rem;
+    padding: 120px 2rem 0;
 }
 
 .hero-content {
     max-width: 800px;
     animation: fadeInUp 1s ease-out;
+    margin-top: 60px;
 }
 
 .hero-title {
@@ -742,6 +743,14 @@ section {
         right: 0;
     }
     
+    .hero {
+        padding: 100px 1rem 0;
+    }
+    
+    .hero-content {
+        margin-top: 40px;
+    }
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -784,7 +793,11 @@ section {
     }
     
     .hero {
-        padding: 0 1rem;
+        padding: 90px 1rem 0;
+    }
+    
+    .hero-content {
+        margin-top: 30px;
     }
     
     .name {
