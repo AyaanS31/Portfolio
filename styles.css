@@ -201,11 +201,16 @@ body {
 
 .greeting {
     display: block;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff6b35, #f7931e, #ff6b35, #9b59b6);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 0.5rem;
-    animation: fadeInUp 1s ease-out 0.2s both;
+    animation: fadeInUp 1s ease-out 0.2s both, gradientShift 3s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
 }
 
 .name {
@@ -751,6 +756,10 @@ section {
         margin-top: 40px;
     }
     
+    .greeting {
+        font-size: 2rem;
+    }
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -798,6 +807,10 @@ section {
     
     .hero-content {
         margin-top: 30px;
+    }
+    
+    .greeting {
+        font-size: 1.8rem;
     }
     
     .name {
